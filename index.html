@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ארגון חיה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #142e25;
+    --bg-deep: #0d211a;
+    --cream: #f3ecdc;
+    --gold: #d1a85a;
+    --sage: #7fa088;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    background: radial-gradient(ellipse at 50% 20%, var(--bg) 0%, var(--bg-deep) 70%);
+    color: var(--cream);
+    font-family: 'Heebo', sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+  }
+  body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image: radial-gradient(circle, rgba(243,236,220,0.05) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events:none;
+  }
+  .wrap{
+    position:relative;
+    text-align:center;
+    padding: 40px 24px;
+    max-width: 520px;
+  }
+  .eyebrow{
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--sage);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    font-weight:400;
+  }
+  .mark{
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 28px;
+    animation: breathe 4.5s ease-in-out infinite;
+  }
+  .mark path{
+    fill:none;
+    stroke: var(--gold);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  @keyframes breathe{
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.045); opacity: 1; }
+  }
+  h1{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    font-size: clamp(38px, 7vw, 58px);
+    color: var(--cream);
+    letter-spacing: 0.01em;
+    margin-bottom: 18px;
+  }
+  .divider{
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 22px;
+    opacity: 0.6;
+  }
+  p.lead{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(243,236,220,0.85);
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  p.sub{
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--sage);
+    margin-top: 20px;
+  }
+  footer{
+    position:absolute;
+    bottom: 28px;
+    left:0; right:0;
+    text-align:center;
+    font-size: 12px;
+    color: rgba(127,160,136,0.6);
+    letter-spacing: 0.05em;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .mark{ animation:none; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">ארגון חיה</div>
+    <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 20 C35 20 25 32 25 46 C25 62 36 76 50 82 C64 76 75 62 75 46 C75 32 65 20 50 20 Z"/>
+      <path d="M38 42 C38 39 40 37 43 37 C46 37 48 39 48 42"/>
+      <path d="M52 42 C52 39 54 37 57 37 C60 37 62 39 62 42"/>
+      <path d="M42 58 C46 63 54 63 58 58"/>
+    </svg>
+    <h1>האתר בבנייה</h1>
+    <div class="divider"></div>
+    <p class="lead">אנחנו עובדים על הבית החדש של ארגון חיה.<br>נשמח שתחזרו לבקר בקרוב.</p>
+    <p class="sub">בינתיים — תודה על הסבלנות</p>
+  </div>
+  <footer>IRGUN CHAYA · בקרוב</footer>
+</body>
+</html>
